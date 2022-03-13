@@ -4,6 +4,8 @@
   <li>Установить пакеты</li>
   <li>Исправить spec файл</li>
   <li>RPM пакет</li>
+  <li>Установка созданного RPM пакета</li>
+  <li>Создание репозитория</li>
   <li></li>
 </ol>
 
@@ -46,3 +48,33 @@
 <li>Проверил что пакеты созданы</li>
  <p> ll rpmbuild/RPMS/x86_64/ 
 </ul>  
+
+# 5.Установка созданного RPM пакета
+<ul>
+<li>Установил пает командой</li>
+  <p> yum localinstall -y \rpmbuild/RPMS/x86_64/nginx-1.14.1-1.el7_4.ngx.x86_64.rpm   
+<li>Ставтовал nginx командой</li>
+  <p> systemctl start nginx   
+<li>Проверил работу nginx командой</li> 
+  <p> systemctl status nginx
+  <p> Вывод терминала представлен в файле "Terminal.txt" https://github.com/sergeyorb/RPM/blob/main/Terminal.txt 
+</ul>
+
+# 6.Создание репозитория
+<ul>
+<li>Создал каталог repo в директории /usr/share/nginx/html.</li>
+  <p> mkdir /usr/share/nginx/html/repo  
+<li>Скопировал туда созданный RPM пакет и RPM пакет из https://repo.percona.com/yum/release/7/RPMS/noarch/percona-release-1.0-22.noarch.rpm</li>
+  <p> cp /root/rpmbuild/RPMS/x86_64/nginx-1.14.1-1.el7_4.ngx.x86_64.rpm /usr/share/nginx/html/repo/
+  <p> wget https://repo.percona.com/yum/release/7/RPMS/noarch/percona-release-1.0-22.noarch.rpm -O /usr/share/nginx/html/repo/percona-release-0.1-6.noarch.rpm  
+<li>Инициализировал репозиторий</li>
+  <p> createrepo /usr/share/nginx/html/repo/  
+<li>Отредактировал default.conf в директории /etc/nginx/conf.d/</li>
+  <p> Добавил autoindex on;  
+<li>Проверил синтаксис nginx</li>
+  <p> nginx -t
+<li>Перезапустил nginx</li>
+  <p> nginx -s reload
+<li>Проверил работу репозитория</li>
+  <p> lynx http://localhost/repo/
+</ul>
