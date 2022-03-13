@@ -6,7 +6,7 @@
   <li>RPM пакет</li>
   <li>Установка созданного RPM пакета</li>
   <li>Создание репозитория</li>
-  <li></li>
+  <li>Тестирование репозитория</li>
 </ol>
 
 # 1.Создать виртуальную машину
@@ -78,3 +78,18 @@
 <li>Проверил работу репозитория</li>
   <p> lynx http://localhost/repo/
 </ul>
+
+# 7.Тестирование репозитория
+<ul>
+<li>Добавил репозиторий в /etc/yum.repos.d</li>
+  <p> cat >> /etc/yum.repos.d/otus.repo << EOF 
+  <p> [otus]
+  <p> name=otus-linux
+  <p> baseurl=http://localhost/repo
+  <p> gpgcheck=0
+  <p> enabled=1
+  <p> EOF 
+<li>Убедился что репозиторий подключился</li>
+  <p> yum repolist enabled | grep otus 
+  <p> yum list | grep otus   
+</ul>  
