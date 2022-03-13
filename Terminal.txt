@@ -1,0 +1,971 @@
+[root@RPM ~]# yum install -y \redhat-lsb-core \wget \rpmdevtools \rpm-build \createrepo \yum-utils
+Failed to set locale, defaulting to C
+Loaded plugins: fastestmirror
+Determining fastest mirrors
+ * base: mirror.surf
+ * extras: mirror.surf
+ * updates: mirror.surf
+base                                                                                               | 3.6 kB  00:00:00
+extras                                                                                             | 2.9 kB  00:00:00
+updates                                                                                            | 2.9 kB  00:00:00
+(1/4): base/7/x86_64/group_gz                                                                      | 153 kB  00:00:00
+(2/4): extras/7/x86_64/primary_db                                                                  | 246 kB  00:00:00
+(3/4): base/7/x86_64/primary_db                                                                    | 6.1 MB  00:00:01
+(4/4): updates/7/x86_64/primary_db                                                                 |  14 MB  00:00:03
+Resolving Dependencies
+--> Running transaction check
+---> Package createrepo.noarch 0:0.9.9-28.el7 will be installed
+--> Processing Dependency: python-deltarpm for package: createrepo-0.9.9-28.el7.noarch
+---> Package redhat-lsb-core.x86_64 0:4.1-27.el7.centos.1 will be installed
+--> Processing Dependency: redhat-lsb-submod-security(x86-64) = 4.1-27.el7.centos.1 for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+--> Processing Dependency: spax for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+--> Processing Dependency: /usr/sbin/fuser for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+--> Processing Dependency: /usr/bin/time for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+--> Processing Dependency: /usr/bin/patch for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+--> Processing Dependency: /usr/bin/m4 for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+--> Processing Dependency: /usr/bin/lpr for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+--> Processing Dependency: /usr/bin/lp for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+--> Processing Dependency: /usr/bin/killall for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+--> Processing Dependency: /usr/bin/bc for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+--> Processing Dependency: /usr/bin/batch for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+--> Processing Dependency: /usr/bin/at for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+--> Processing Dependency: /bin/mailx for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+--> Processing Dependency: /bin/ed for package: redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+---> Package rpm-build.x86_64 0:4.11.3-48.el7_9 will be installed
+--> Processing Dependency: rpm = 4.11.3-48.el7_9 for package: rpm-build-4.11.3-48.el7_9.x86_64
+--> Processing Dependency: elfutils >= 0.128 for package: rpm-build-4.11.3-48.el7_9.x86_64
+--> Processing Dependency: unzip for package: rpm-build-4.11.3-48.el7_9.x86_64
+--> Processing Dependency: system-rpm-config for package: rpm-build-4.11.3-48.el7_9.x86_64
+--> Processing Dependency: perl(threads) for package: rpm-build-4.11.3-48.el7_9.x86_64
+--> Processing Dependency: perl(Thread::Queue) for package: rpm-build-4.11.3-48.el7_9.x86_64
+--> Processing Dependency: perl(Getopt::Long) for package: rpm-build-4.11.3-48.el7_9.x86_64
+--> Processing Dependency: perl(File::Temp) for package: rpm-build-4.11.3-48.el7_9.x86_64
+--> Processing Dependency: perl(File::Basename) for package: rpm-build-4.11.3-48.el7_9.x86_64
+--> Processing Dependency: /usr/bin/perl for package: rpm-build-4.11.3-48.el7_9.x86_64
+--> Processing Dependency: /usr/bin/gdb-add-index for package: rpm-build-4.11.3-48.el7_9.x86_64
+---> Package rpmdevtools.noarch 0:8.3-8.el7_9 will be installed
+--> Processing Dependency: perl(File::Spec) for package: rpmdevtools-8.3-8.el7_9.noarch
+--> Processing Dependency: emacs-filesystem for package: rpmdevtools-8.3-8.el7_9.noarch
+---> Package wget.x86_64 0:1.14-18.el7_6.1 will be installed
+---> Package yum-utils.noarch 0:1.1.31-53.el7 will be updated
+---> Package yum-utils.noarch 0:1.1.31-54.el7_8 will be an update
+--> Running transaction check
+---> Package at.x86_64 0:3.1.13-24.el7 will be installed
+---> Package bc.x86_64 0:1.06.95-13.el7 will be installed
+---> Package cups-client.x86_64 1:1.6.3-51.el7 will be installed
+--> Processing Dependency: cups-libs(x86-64) = 1:1.6.3-51.el7 for package: 1:cups-client-1.6.3-51.el7.x86_64
+---> Package ed.x86_64 0:1.9-4.el7 will be installed
+---> Package elfutils.x86_64 0:0.176-5.el7 will be installed
+--> Processing Dependency: elfutils-libs(x86-64) = 0.176-5.el7 for package: elfutils-0.176-5.el7.x86_64
+--> Processing Dependency: elfutils-libelf(x86-64) = 0.176-5.el7 for package: elfutils-0.176-5.el7.x86_64
+---> Package emacs-filesystem.noarch 1:24.3-23.el7 will be installed
+---> Package gdb.x86_64 0:7.6.1-120.el7 will be installed
+---> Package m4.x86_64 0:1.4.16-10.el7 will be installed
+---> Package mailx.x86_64 0:12.5-19.el7 will be installed
+---> Package patch.x86_64 0:2.7.1-12.el7_7 will be installed
+---> Package perl.x86_64 4:5.16.3-299.el7_9 will be installed
+--> Processing Dependency: perl-libs = 4:5.16.3-299.el7_9 for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Socket) >= 1.3 for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Scalar::Util) >= 1.10 for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl-macros for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl-libs for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(threads::shared) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(constant) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Time::Local) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Time::HiRes) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Storable) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Socket) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Scalar::Util) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Pod::Simple::XHTML) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Pod::Simple::Search) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Filter::Util::Call) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(File::Path) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Exporter) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Carp) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: libperl.so()(64bit) for package: 4:perl-5.16.3-299.el7_9.x86_64
+---> Package perl-File-Temp.noarch 0:0.23.01-3.el7 will be installed
+---> Package perl-Getopt-Long.noarch 0:2.40-3.el7 will be installed
+--> Processing Dependency: perl(Pod::Usage) >= 1.14 for package: perl-Getopt-Long-2.40-3.el7.noarch
+--> Processing Dependency: perl(Text::ParseWords) for package: perl-Getopt-Long-2.40-3.el7.noarch
+---> Package perl-PathTools.x86_64 0:3.40-5.el7 will be installed
+---> Package perl-Thread-Queue.noarch 0:3.02-2.el7 will be installed
+---> Package perl-threads.x86_64 0:1.87-4.el7 will be installed
+---> Package psmisc.x86_64 0:22.20-17.el7 will be installed
+---> Package python-deltarpm.x86_64 0:3.6-3.el7 will be installed
+---> Package redhat-lsb-submod-security.x86_64 0:4.1-27.el7.centos.1 will be installed
+---> Package redhat-rpm-config.noarch 0:9.1.0-88.el7.centos will be installed
+--> Processing Dependency: dwz >= 0.4 for package: redhat-rpm-config-9.1.0-88.el7.centos.noarch
+--> Processing Dependency: zip for package: redhat-rpm-config-9.1.0-88.el7.centos.noarch
+--> Processing Dependency: python-srpm-macros for package: redhat-rpm-config-9.1.0-88.el7.centos.noarch
+--> Processing Dependency: perl-srpm-macros for package: redhat-rpm-config-9.1.0-88.el7.centos.noarch
+---> Package rpm.x86_64 0:4.11.3-43.el7 will be updated
+--> Processing Dependency: rpm = 4.11.3-43.el7 for package: rpm-libs-4.11.3-43.el7.x86_64
+--> Processing Dependency: rpm = 4.11.3-43.el7 for package: rpm-python-4.11.3-43.el7.x86_64
+---> Package rpm.x86_64 0:4.11.3-48.el7_9 will be an update
+---> Package spax.x86_64 0:1.5.2-13.el7 will be installed
+---> Package time.x86_64 0:1.7-45.el7 will be installed
+---> Package unzip.x86_64 0:6.0-24.el7_9 will be installed
+--> Running transaction check
+---> Package cups-libs.x86_64 1:1.6.3-43.el7 will be updated
+---> Package cups-libs.x86_64 1:1.6.3-51.el7 will be an update
+---> Package dwz.x86_64 0:0.11-3.el7 will be installed
+---> Package elfutils-libelf.x86_64 0:0.176-4.el7 will be updated
+---> Package elfutils-libelf.x86_64 0:0.176-5.el7 will be an update
+---> Package elfutils-libs.x86_64 0:0.176-4.el7 will be updated
+---> Package elfutils-libs.x86_64 0:0.176-5.el7 will be an update
+---> Package perl-Carp.noarch 0:1.26-244.el7 will be installed
+---> Package perl-Exporter.noarch 0:5.68-3.el7 will be installed
+---> Package perl-File-Path.noarch 0:2.09-2.el7 will be installed
+---> Package perl-Filter.x86_64 0:1.49-3.el7 will be installed
+---> Package perl-Pod-Simple.noarch 1:3.28-4.el7 will be installed
+--> Processing Dependency: perl(Pod::Escapes) >= 1.04 for package: 1:perl-Pod-Simple-3.28-4.el7.noarch
+--> Processing Dependency: perl(Encode) for package: 1:perl-Pod-Simple-3.28-4.el7.noarch
+---> Package perl-Pod-Usage.noarch 0:1.63-3.el7 will be installed
+--> Processing Dependency: perl(Pod::Text) >= 3.15 for package: perl-Pod-Usage-1.63-3.el7.noarch
+--> Processing Dependency: perl-Pod-Perldoc for package: perl-Pod-Usage-1.63-3.el7.noarch
+---> Package perl-Scalar-List-Utils.x86_64 0:1.27-248.el7 will be installed
+---> Package perl-Socket.x86_64 0:2.010-5.el7 will be installed
+---> Package perl-Storable.x86_64 0:2.45-3.el7 will be installed
+---> Package perl-Text-ParseWords.noarch 0:3.29-4.el7 will be installed
+---> Package perl-Time-HiRes.x86_64 4:1.9725-3.el7 will be installed
+---> Package perl-Time-Local.noarch 0:1.2300-2.el7 will be installed
+---> Package perl-constant.noarch 0:1.27-2.el7 will be installed
+---> Package perl-libs.x86_64 4:5.16.3-299.el7_9 will be installed
+---> Package perl-macros.x86_64 4:5.16.3-299.el7_9 will be installed
+---> Package perl-srpm-macros.noarch 0:1-8.el7 will be installed
+---> Package perl-threads-shared.x86_64 0:1.43-6.el7 will be installed
+---> Package python-srpm-macros.noarch 0:3-34.el7 will be installed
+---> Package rpm-libs.x86_64 0:4.11.3-43.el7 will be updated
+--> Processing Dependency: rpm-libs(x86-64) = 4.11.3-43.el7 for package: rpm-build-libs-4.11.3-43.el7.x86_64
+---> Package rpm-libs.x86_64 0:4.11.3-48.el7_9 will be an update
+---> Package rpm-python.x86_64 0:4.11.3-43.el7 will be updated
+---> Package rpm-python.x86_64 0:4.11.3-48.el7_9 will be an update
+---> Package zip.x86_64 0:3.0-11.el7 will be installed
+--> Running transaction check
+---> Package perl-Encode.x86_64 0:2.51-7.el7 will be installed
+---> Package perl-Pod-Escapes.noarch 1:1.04-299.el7_9 will be installed
+---> Package perl-Pod-Perldoc.noarch 0:3.20-4.el7 will be installed
+--> Processing Dependency: perl(parent) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
+--> Processing Dependency: perl(HTTP::Tiny) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
+---> Package perl-podlators.noarch 0:2.5.1-3.el7 will be installed
+---> Package rpm-build-libs.x86_64 0:4.11.3-43.el7 will be updated
+---> Package rpm-build-libs.x86_64 0:4.11.3-48.el7_9 will be an update
+--> Running transaction check
+---> Package perl-HTTP-Tiny.noarch 0:0.033-3.el7 will be installed
+---> Package perl-parent.noarch 1:0.225-244.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+==========================================================================================================================
+ Package                                 Arch                Version                           Repository            Size
+==========================================================================================================================
+Installing:
+ createrepo                              noarch              0.9.9-28.el7                      base                  94 k
+ redhat-lsb-core                         x86_64              4.1-27.el7.centos.1               base                  38 k
+ rpm-build                               x86_64              4.11.3-48.el7_9                   updates              150 k
+ rpmdevtools                             noarch              8.3-8.el7_9                       updates               97 k
+ wget                                    x86_64              1.14-18.el7_6.1                   base                 547 k
+Updating:
+ yum-utils                               noarch              1.1.31-54.el7_8                   base                 122 k
+Installing for dependencies:
+ at                                      x86_64              3.1.13-24.el7                     base                  51 k
+ bc                                      x86_64              1.06.95-13.el7                    base                 115 k
+ cups-client                             x86_64              1:1.6.3-51.el7                    base                 153 k
+ dwz                                     x86_64              0.11-3.el7                        base                  99 k
+ ed                                      x86_64              1.9-4.el7                         base                  72 k
+ elfutils                                x86_64              0.176-5.el7                       base                 308 k
+ emacs-filesystem                        noarch              1:24.3-23.el7                     base                  58 k
+ gdb                                     x86_64              7.6.1-120.el7                     base                 2.4 M
+ m4                                      x86_64              1.4.16-10.el7                     base                 256 k
+ mailx                                   x86_64              12.5-19.el7                       base                 245 k
+ patch                                   x86_64              2.7.1-12.el7_7                    base                 111 k
+ perl                                    x86_64              4:5.16.3-299.el7_9                updates              8.0 M
+ perl-Carp                               noarch              1.26-244.el7                      base                  19 k
+ perl-Encode                             x86_64              2.51-7.el7                        base                 1.5 M
+ perl-Exporter                           noarch              5.68-3.el7                        base                  28 k
+ perl-File-Path                          noarch              2.09-2.el7                        base                  26 k
+ perl-File-Temp                          noarch              0.23.01-3.el7                     base                  56 k
+ perl-Filter                             x86_64              1.49-3.el7                        base                  76 k
+ perl-Getopt-Long                        noarch              2.40-3.el7                        base                  56 k
+ perl-HTTP-Tiny                          noarch              0.033-3.el7                       base                  38 k
+ perl-PathTools                          x86_64              3.40-5.el7                        base                  82 k
+ perl-Pod-Escapes                        noarch              1:1.04-299.el7_9                  updates               52 k
+ perl-Pod-Perldoc                        noarch              3.20-4.el7                        base                  87 k
+ perl-Pod-Simple                         noarch              1:3.28-4.el7                      base                 216 k
+ perl-Pod-Usage                          noarch              1.63-3.el7                        base                  27 k
+ perl-Scalar-List-Utils                  x86_64              1.27-248.el7                      base                  36 k
+ perl-Socket                             x86_64              2.010-5.el7                       base                  49 k
+ perl-Storable                           x86_64              2.45-3.el7                        base                  77 k
+ perl-Text-ParseWords                    noarch              3.29-4.el7                        base                  14 k
+ perl-Thread-Queue                       noarch              3.02-2.el7                        base                  17 k
+ perl-Time-HiRes                         x86_64              4:1.9725-3.el7                    base                  45 k
+ perl-Time-Local                         noarch              1.2300-2.el7                      base                  24 k
+ perl-constant                           noarch              1.27-2.el7                        base                  19 k
+ perl-libs                               x86_64              4:5.16.3-299.el7_9                updates              690 k
+ perl-macros                             x86_64              4:5.16.3-299.el7_9                updates               44 k
+ perl-parent                             noarch              1:0.225-244.el7                   base                  12 k
+ perl-podlators                          noarch              2.5.1-3.el7                       base                 112 k
+ perl-srpm-macros                        noarch              1-8.el7                           base                 4.6 k
+ perl-threads                            x86_64              1.87-4.el7                        base                  49 k
+ perl-threads-shared                     x86_64              1.43-6.el7                        base                  39 k
+ psmisc                                  x86_64              22.20-17.el7                      base                 141 k
+ python-deltarpm                         x86_64              3.6-3.el7                         base                  31 k
+ python-srpm-macros                      noarch              3-34.el7                          base                 8.8 k
+ redhat-lsb-submod-security              x86_64              4.1-27.el7.centos.1               base                  15 k
+ redhat-rpm-config                       noarch              9.1.0-88.el7.centos               base                  81 k
+ spax                                    x86_64              1.5.2-13.el7                      base                 260 k
+ time                                    x86_64              1.7-45.el7                        base                  30 k
+ unzip                                   x86_64              6.0-24.el7_9                      updates              172 k
+ zip                                     x86_64              3.0-11.el7                        base                 260 k
+Updating for dependencies:
+ cups-libs                               x86_64              1:1.6.3-51.el7                    base                 359 k
+ elfutils-libelf                         x86_64              0.176-5.el7                       base                 195 k
+ elfutils-libs                           x86_64              0.176-5.el7                       base                 291 k
+ rpm                                     x86_64              4.11.3-48.el7_9                   updates              1.2 M
+ rpm-build-libs                          x86_64              4.11.3-48.el7_9                   updates              108 k
+ rpm-libs                                x86_64              4.11.3-48.el7_9                   updates              279 k
+ rpm-python                              x86_64              4.11.3-48.el7_9                   updates               84 k
+
+Transaction Summary
+==========================================================================================================================
+Install  5 Packages (+49 Dependent packages)
+Upgrade  1 Package  (+ 7 Dependent packages)
+
+Total download size: 20 M
+Downloading packages:
+No Presto metadata available for base
+No Presto metadata available for updates
+warning: /var/cache/yum/x86_64/7/base/packages/at-3.1.13-24.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+Public key for at-3.1.13-24.el7.x86_64.rpm is not installed
+(1/62): at-3.1.13-24.el7.x86_64.rpm                                                                |  51 kB  00:00:00
+(2/62): createrepo-0.9.9-28.el7.noarch.rpm                                                         |  94 kB  00:00:00
+(3/62): cups-client-1.6.3-51.el7.x86_64.rpm                                                        | 153 kB  00:00:00
+(4/62): bc-1.06.95-13.el7.x86_64.rpm                                                               | 115 kB  00:00:00
+(5/62): dwz-0.11-3.el7.x86_64.rpm                                                                  |  99 kB  00:00:00
+(6/62): cups-libs-1.6.3-51.el7.x86_64.rpm                                                          | 359 kB  00:00:00
+(7/62): ed-1.9-4.el7.x86_64.rpm                                                                    |  72 kB  00:00:00
+(8/62): emacs-filesystem-24.3-23.el7.noarch.rpm                                                    |  58 kB  00:00:00
+(9/62): elfutils-libs-0.176-5.el7.x86_64.rpm                                                       | 291 kB  00:00:00
+(10/62): elfutils-libelf-0.176-5.el7.x86_64.rpm                                                    | 195 kB  00:00:00
+(11/62): elfutils-0.176-5.el7.x86_64.rpm                                                           | 308 kB  00:00:00
+(12/62): m4-1.4.16-10.el7.x86_64.rpm                                                               | 256 kB  00:00:00
+(13/62): patch-2.7.1-12.el7_7.x86_64.rpm                                                           | 111 kB  00:00:00
+(14/62): mailx-12.5-19.el7.x86_64.rpm                                                              | 245 kB  00:00:00
+(15/62): perl-Exporter-5.68-3.el7.noarch.rpm                                                       |  28 kB  00:00:00
+(16/62): perl-Carp-1.26-244.el7.noarch.rpm                                                         |  19 kB  00:00:00
+(17/62): perl-File-Path-2.09-2.el7.noarch.rpm                                                      |  26 kB  00:00:00
+(18/62): perl-File-Temp-0.23.01-3.el7.noarch.rpm                                                   |  56 kB  00:00:00
+(19/62): perl-Getopt-Long-2.40-3.el7.noarch.rpm                                                    |  56 kB  00:00:00
+(20/62): perl-Filter-1.49-3.el7.x86_64.rpm                                                         |  76 kB  00:00:00
+(21/62): perl-Encode-2.51-7.el7.x86_64.rpm                                                         | 1.5 MB  00:00:00
+(22/62): perl-HTTP-Tiny-0.033-3.el7.noarch.rpm                                                     |  38 kB  00:00:00
+(23/62): gdb-7.6.1-120.el7.x86_64.rpm                                                              | 2.4 MB  00:00:01
+(24/62): perl-PathTools-3.40-5.el7.x86_64.rpm                                                      |  82 kB  00:00:00
+(25/62): perl-Pod-Perldoc-3.20-4.el7.noarch.rpm                                                    |  87 kB  00:00:00
+(26/62): perl-Pod-Usage-1.63-3.el7.noarch.rpm                                                      |  27 kB  00:00:00
+(27/62): perl-Pod-Simple-3.28-4.el7.noarch.rpm                                                     | 216 kB  00:00:00
+(28/62): perl-Scalar-List-Utils-1.27-248.el7.x86_64.rpm                                            |  36 kB  00:00:00
+(29/62): perl-Socket-2.010-5.el7.x86_64.rpm                                                        |  49 kB  00:00:00
+(30/62): perl-Storable-2.45-3.el7.x86_64.rpm                                                       |  77 kB  00:00:00
+(31/62): perl-Text-ParseWords-3.29-4.el7.noarch.rpm                                                |  14 kB  00:00:00
+(32/62): perl-Thread-Queue-3.02-2.el7.noarch.rpm                                                   |  17 kB  00:00:00
+(33/62): perl-Time-Local-1.2300-2.el7.noarch.rpm                                                   |  24 kB  00:00:00
+(34/62): perl-Time-HiRes-1.9725-3.el7.x86_64.rpm                                                   |  45 kB  00:00:00
+(35/62): perl-constant-1.27-2.el7.noarch.rpm                                                       |  19 kB  00:00:00
+Public key for perl-Pod-Escapes-1.04-299.el7_9.noarch.rpm is not installed
+(36/62): perl-Pod-Escapes-1.04-299.el7_9.noarch.rpm                                                |  52 kB  00:00:00
+(37/62): perl-libs-5.16.3-299.el7_9.x86_64.rpm                                                     | 690 kB  00:00:00
+(38/62): perl-macros-5.16.3-299.el7_9.x86_64.rpm                                                   |  44 kB  00:00:00
+(39/62): perl-podlators-2.5.1-3.el7.noarch.rpm                                                     | 112 kB  00:00:00
+(40/62): perl-threads-shared-1.43-6.el7.x86_64.rpm                                                 |  39 kB  00:00:00
+(41/62): psmisc-22.20-17.el7.x86_64.rpm                                                            | 141 kB  00:00:00
+(42/62): python-deltarpm-3.6-3.el7.x86_64.rpm                                                      |  31 kB  00:00:00
+(43/62): perl-parent-0.225-244.el7.noarch.rpm                                                      |  12 kB  00:00:00
+(44/62): python-srpm-macros-3-34.el7.noarch.rpm                                                    | 8.8 kB  00:00:00
+(45/62): perl-srpm-macros-1-8.el7.noarch.rpm                                                       | 4.6 kB  00:00:00
+(46/62): redhat-lsb-submod-security-4.1-27.el7.centos.1.x86_64.rpm                                 |  15 kB  00:00:00
+(47/62): redhat-lsb-core-4.1-27.el7.centos.1.x86_64.rpm                                            |  38 kB  00:00:00
+(48/62): perl-threads-1.87-4.el7.x86_64.rpm                                                        |  49 kB  00:00:00
+(49/62): redhat-rpm-config-9.1.0-88.el7.centos.noarch.rpm                                          |  81 kB  00:00:00
+(50/62): rpm-4.11.3-48.el7_9.x86_64.rpm                                                            | 1.2 MB  00:00:00
+(51/62): rpm-build-4.11.3-48.el7_9.x86_64.rpm                                                      | 150 kB  00:00:00
+(52/62): rpm-build-libs-4.11.3-48.el7_9.x86_64.rpm                                                 | 108 kB  00:00:00
+(53/62): rpm-libs-4.11.3-48.el7_9.x86_64.rpm                                                       | 279 kB  00:00:00
+(54/62): rpm-python-4.11.3-48.el7_9.x86_64.rpm                                                     |  84 kB  00:00:00
+(55/62): rpmdevtools-8.3-8.el7_9.noarch.rpm                                                        |  97 kB  00:00:00
+(56/62): time-1.7-45.el7.x86_64.rpm                                                                |  30 kB  00:00:00
+(57/62): unzip-6.0-24.el7_9.x86_64.rpm                                                             | 172 kB  00:00:00
+(58/62): perl-5.16.3-299.el7_9.x86_64.rpm                                                          | 8.0 MB  00:00:02
+(59/62): yum-utils-1.1.31-54.el7_8.noarch.rpm                                                      | 122 kB  00:00:00
+(60/62): spax-1.5.2-13.el7.x86_64.rpm                                                              | 260 kB  00:00:00
+(61/62): zip-3.0-11.el7.x86_64.rpm                                                                 | 260 kB  00:00:00
+(62/62): wget-1.14-18.el7_6.1.x86_64.rpm                                                           | 547 kB  00:00:00
+--------------------------------------------------------------------------------------------------------------------------
+Total                                                                                     4.6 MB/s |  20 MB  00:00:04
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Importing GPG key 0xF4A80EB5:
+ Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+ Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+ Package    : centos-release-7-8.2003.0.el7.centos.x86_64 (@anaconda)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : elfutils-libelf-0.176-5.el7.x86_64                                                                    1/70
+  Updating   : rpm-libs-4.11.3-48.el7_9.x86_64                                                                       2/70
+  Updating   : rpm-4.11.3-48.el7_9.x86_64                                                                            3/70
+  Updating   : rpm-build-libs-4.11.3-48.el7_9.x86_64                                                                 4/70
+  Updating   : rpm-python-4.11.3-48.el7_9.x86_64                                                                     5/70
+  Installing : patch-2.7.1-12.el7_7.x86_64                                                                           6/70
+  Installing : dwz-0.11-3.el7.x86_64                                                                                 7/70
+  Updating   : elfutils-libs-0.176-5.el7.x86_64                                                                      8/70
+  Installing : elfutils-0.176-5.el7.x86_64                                                                           9/70
+  Installing : 1:perl-parent-0.225-244.el7.noarch                                                                   10/70
+  Installing : perl-HTTP-Tiny-0.033-3.el7.noarch                                                                    11/70
+  Installing : perl-podlators-2.5.1-3.el7.noarch                                                                    12/70
+  Installing : perl-Pod-Perldoc-3.20-4.el7.noarch                                                                   13/70
+  Installing : 1:perl-Pod-Escapes-1.04-299.el7_9.noarch                                                             14/70
+  Installing : perl-Text-ParseWords-3.29-4.el7.noarch                                                               15/70
+  Installing : perl-Encode-2.51-7.el7.x86_64                                                                        16/70
+  Installing : perl-Pod-Usage-1.63-3.el7.noarch                                                                     17/70
+  Installing : 4:perl-macros-5.16.3-299.el7_9.x86_64                                                                18/70
+  Installing : perl-Exporter-5.68-3.el7.noarch                                                                      19/70
+  Installing : perl-constant-1.27-2.el7.noarch                                                                      20/70
+  Installing : perl-Socket-2.010-5.el7.x86_64                                                                       21/70
+  Installing : perl-Time-Local-1.2300-2.el7.noarch                                                                  22/70
+  Installing : perl-Carp-1.26-244.el7.noarch                                                                        23/70
+  Installing : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                                                                24/70
+  Installing : perl-File-Path-2.09-2.el7.noarch                                                                     25/70
+  Installing : perl-PathTools-3.40-5.el7.x86_64                                                                     26/70
+  Installing : perl-File-Temp-0.23.01-3.el7.noarch                                                                  27/70
+  Installing : perl-Scalar-List-Utils-1.27-248.el7.x86_64                                                           28/70
+  Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                                                                  29/70
+  Installing : perl-Storable-2.45-3.el7.x86_64                                                                      30/70
+  Installing : perl-threads-shared-1.43-6.el7.x86_64                                                                31/70
+  Installing : perl-threads-1.87-4.el7.x86_64                                                                       32/70
+  Installing : perl-Filter-1.49-3.el7.x86_64                                                                        33/70
+  Installing : 4:perl-libs-5.16.3-299.el7_9.x86_64                                                                  34/70
+  Installing : perl-Getopt-Long-2.40-3.el7.noarch                                                                   35/70
+  Installing : 4:perl-5.16.3-299.el7_9.x86_64                                                                       36/70
+  Installing : perl-Thread-Queue-3.02-2.el7.noarch                                                                  37/70
+  Installing : psmisc-22.20-17.el7.x86_64                                                                           38/70
+  Installing : mailx-12.5-19.el7.x86_64                                                                             39/70
+  Installing : python-srpm-macros-3-34.el7.noarch                                                                   40/70
+  Installing : ed-1.9-4.el7.x86_64                                                                                  41/70
+  Installing : spax-1.5.2-13.el7.x86_64                                                                             42/70
+  Installing : zip-3.0-11.el7.x86_64                                                                                43/70
+  Installing : time-1.7-45.el7.x86_64                                                                               44/70
+  Installing : python-deltarpm-3.6-3.el7.x86_64                                                                     45/70
+  Installing : at-3.1.13-24.el7.x86_64                                                                              46/70
+  Installing : gdb-7.6.1-120.el7.x86_64                                                                             47/70
+  Installing : perl-srpm-macros-1-8.el7.noarch                                                                      48/70
+  Installing : redhat-rpm-config-9.1.0-88.el7.centos.noarch                                                         49/70
+  Updating   : 1:cups-libs-1.6.3-51.el7.x86_64                                                                      50/70
+  Installing : 1:cups-client-1.6.3-51.el7.x86_64                                                                    51/70
+  Installing : bc-1.06.95-13.el7.x86_64                                                                             52/70
+  Installing : m4-1.4.16-10.el7.x86_64                                                                              53/70
+  Installing : unzip-6.0-24.el7_9.x86_64                                                                            54/70
+  Installing : rpm-build-4.11.3-48.el7_9.x86_64                                                                     55/70
+  Installing : 1:emacs-filesystem-24.3-23.el7.noarch                                                                56/70
+  Installing : redhat-lsb-submod-security-4.1-27.el7.centos.1.x86_64                                                57/70
+  Installing : redhat-lsb-core-4.1-27.el7.centos.1.x86_64                                                           58/70
+  Installing : rpmdevtools-8.3-8.el7_9.noarch                                                                       59/70
+  Installing : createrepo-0.9.9-28.el7.noarch                                                                       60/70
+  Installing : wget-1.14-18.el7_6.1.x86_64                                                                          61/70
+  Updating   : yum-utils-1.1.31-54.el7_8.noarch                                                                     62/70
+  Cleanup    : yum-utils-1.1.31-53.el7.noarch                                                                       63/70
+  Cleanup    : rpm-python-4.11.3-43.el7.x86_64                                                                      64/70
+  Cleanup    : rpm-build-libs-4.11.3-43.el7.x86_64                                                                  65/70
+  Cleanup    : rpm-libs-4.11.3-43.el7.x86_64                                                                        66/70
+  Cleanup    : rpm-4.11.3-43.el7.x86_64                                                                             67/70
+  Cleanup    : elfutils-libs-0.176-4.el7.x86_64                                                                     68/70
+  Cleanup    : elfutils-libelf-0.176-4.el7.x86_64                                                                   69/70
+  Cleanup    : 1:cups-libs-1.6.3-43.el7.x86_64                                                                      70/70
+  Verifying  : perl-HTTP-Tiny-0.033-3.el7.noarch                                                                     1/70
+  Verifying  : redhat-lsb-submod-security-4.1-27.el7.centos.1.x86_64                                                 2/70
+  Verifying  : perl-Pod-Perldoc-3.20-4.el7.noarch                                                                    3/70
+  Verifying  : perl-threads-shared-1.43-6.el7.x86_64                                                                 4/70
+  Verifying  : rpm-4.11.3-48.el7_9.x86_64                                                                            5/70
+  Verifying  : 1:emacs-filesystem-24.3-23.el7.noarch                                                                 6/70
+  Verifying  : perl-Exporter-5.68-3.el7.noarch                                                                       7/70
+  Verifying  : perl-constant-1.27-2.el7.noarch                                                                       8/70
+  Verifying  : perl-PathTools-3.40-5.el7.x86_64                                                                      9/70
+  Verifying  : unzip-6.0-24.el7_9.x86_64                                                                            10/70
+  Verifying  : m4-1.4.16-10.el7.x86_64                                                                              11/70
+  Verifying  : perl-Socket-2.010-5.el7.x86_64                                                                       12/70
+  Verifying  : bc-1.06.95-13.el7.x86_64                                                                             13/70
+  Verifying  : 1:cups-client-1.6.3-51.el7.x86_64                                                                    14/70
+  Verifying  : 1:cups-libs-1.6.3-51.el7.x86_64                                                                      15/70
+  Verifying  : 1:perl-parent-0.225-244.el7.noarch                                                                   16/70
+  Verifying  : 4:perl-macros-5.16.3-299.el7_9.x86_64                                                                17/70
+  Verifying  : perl-srpm-macros-1-8.el7.noarch                                                                      18/70
+  Verifying  : perl-Thread-Queue-3.02-2.el7.noarch                                                                  19/70
+  Verifying  : perl-File-Temp-0.23.01-3.el7.noarch                                                                  20/70
+  Verifying  : rpmdevtools-8.3-8.el7_9.noarch                                                                       21/70
+  Verifying  : 1:perl-Pod-Simple-3.28-4.el7.noarch                                                                  22/70
+  Verifying  : gdb-7.6.1-120.el7.x86_64                                                                             23/70
+  Verifying  : dwz-0.11-3.el7.x86_64                                                                                24/70
+  Verifying  : perl-Time-Local-1.2300-2.el7.noarch                                                                  25/70
+  Verifying  : 1:perl-Pod-Escapes-1.04-299.el7_9.noarch                                                             26/70
+  Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                                                               27/70
+  Verifying  : yum-utils-1.1.31-54.el7_8.noarch                                                                     28/70
+  Verifying  : redhat-lsb-core-4.1-27.el7.centos.1.x86_64                                                           29/70
+  Verifying  : patch-2.7.1-12.el7_7.x86_64                                                                          30/70
+  Verifying  : perl-File-Path-2.09-2.el7.noarch                                                                     31/70
+  Verifying  : perl-Carp-1.26-244.el7.noarch                                                                        32/70
+  Verifying  : perl-podlators-2.5.1-3.el7.noarch                                                                    33/70
+  Verifying  : rpm-build-4.11.3-48.el7_9.x86_64                                                                     34/70
+  Verifying  : at-3.1.13-24.el7.x86_64                                                                              35/70
+  Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                                                                36/70
+  Verifying  : createrepo-0.9.9-28.el7.noarch                                                                       37/70
+  Verifying  : perl-Scalar-List-Utils-1.27-248.el7.x86_64                                                           38/70
+  Verifying  : elfutils-libelf-0.176-5.el7.x86_64                                                                   39/70
+  Verifying  : rpm-libs-4.11.3-48.el7_9.x86_64                                                                      40/70
+  Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                                                                     41/70
+  Verifying  : perl-Encode-2.51-7.el7.x86_64                                                                        42/70
+  Verifying  : perl-Storable-2.45-3.el7.x86_64                                                                      43/70
+  Verifying  : rpm-python-4.11.3-48.el7_9.x86_64                                                                    44/70
+  Verifying  : python-deltarpm-3.6-3.el7.x86_64                                                                     45/70
+  Verifying  : 4:perl-5.16.3-299.el7_9.x86_64                                                                       46/70
+  Verifying  : time-1.7-45.el7.x86_64                                                                               47/70
+  Verifying  : zip-3.0-11.el7.x86_64                                                                                48/70
+  Verifying  : perl-threads-1.87-4.el7.x86_64                                                                       49/70
+  Verifying  : spax-1.5.2-13.el7.x86_64                                                                             50/70
+  Verifying  : rpm-build-libs-4.11.3-48.el7_9.x86_64                                                                51/70
+  Verifying  : perl-Filter-1.49-3.el7.x86_64                                                                        52/70
+  Verifying  : perl-Getopt-Long-2.40-3.el7.noarch                                                                   53/70
+  Verifying  : ed-1.9-4.el7.x86_64                                                                                  54/70
+  Verifying  : python-srpm-macros-3-34.el7.noarch                                                                   55/70
+  Verifying  : wget-1.14-18.el7_6.1.x86_64                                                                          56/70
+  Verifying  : mailx-12.5-19.el7.x86_64                                                                             57/70
+  Verifying  : 4:perl-libs-5.16.3-299.el7_9.x86_64                                                                  58/70
+  Verifying  : psmisc-22.20-17.el7.x86_64                                                                           59/70
+  Verifying  : elfutils-0.176-5.el7.x86_64                                                                          60/70
+  Verifying  : elfutils-libs-0.176-5.el7.x86_64                                                                     61/70
+  Verifying  : redhat-rpm-config-9.1.0-88.el7.centos.noarch                                                         62/70
+  Verifying  : rpm-python-4.11.3-43.el7.x86_64                                                                      63/70
+  Verifying  : 1:cups-libs-1.6.3-43.el7.x86_64                                                                      64/70
+  Verifying  : rpm-build-libs-4.11.3-43.el7.x86_64                                                                  65/70
+  Verifying  : rpm-4.11.3-43.el7.x86_64                                                                             66/70
+  Verifying  : elfutils-libelf-0.176-4.el7.x86_64                                                                   67/70
+  Verifying  : elfutils-libs-0.176-4.el7.x86_64                                                                     68/70
+  Verifying  : rpm-libs-4.11.3-43.el7.x86_64                                                                        69/70
+  Verifying  : yum-utils-1.1.31-53.el7.noarch                                                                       70/70
+
+Installed:
+  createrepo.noarch 0:0.9.9-28.el7   redhat-lsb-core.x86_64 0:4.1-27.el7.centos.1   rpm-build.x86_64 0:4.11.3-48.el7_9
+  rpmdevtools.noarch 0:8.3-8.el7_9   wget.x86_64 0:1.14-18.el7_6.1
+
+Dependency Installed:
+  at.x86_64 0:3.1.13-24.el7                               bc.x86_64 0:1.06.95-13.el7
+  cups-client.x86_64 1:1.6.3-51.el7                       dwz.x86_64 0:0.11-3.el7
+  ed.x86_64 0:1.9-4.el7                                   elfutils.x86_64 0:0.176-5.el7
+  emacs-filesystem.noarch 1:24.3-23.el7                   gdb.x86_64 0:7.6.1-120.el7
+  m4.x86_64 0:1.4.16-10.el7                               mailx.x86_64 0:12.5-19.el7
+  patch.x86_64 0:2.7.1-12.el7_7                           perl.x86_64 4:5.16.3-299.el7_9
+  perl-Carp.noarch 0:1.26-244.el7                         perl-Encode.x86_64 0:2.51-7.el7
+  perl-Exporter.noarch 0:5.68-3.el7                       perl-File-Path.noarch 0:2.09-2.el7
+  perl-File-Temp.noarch 0:0.23.01-3.el7                   perl-Filter.x86_64 0:1.49-3.el7
+  perl-Getopt-Long.noarch 0:2.40-3.el7                    perl-HTTP-Tiny.noarch 0:0.033-3.el7
+  perl-PathTools.x86_64 0:3.40-5.el7                      perl-Pod-Escapes.noarch 1:1.04-299.el7_9
+  perl-Pod-Perldoc.noarch 0:3.20-4.el7                    perl-Pod-Simple.noarch 1:3.28-4.el7
+  perl-Pod-Usage.noarch 0:1.63-3.el7                      perl-Scalar-List-Utils.x86_64 0:1.27-248.el7
+  perl-Socket.x86_64 0:2.010-5.el7                        perl-Storable.x86_64 0:2.45-3.el7
+  perl-Text-ParseWords.noarch 0:3.29-4.el7                perl-Thread-Queue.noarch 0:3.02-2.el7
+  perl-Time-HiRes.x86_64 4:1.9725-3.el7                   perl-Time-Local.noarch 0:1.2300-2.el7
+  perl-constant.noarch 0:1.27-2.el7                       perl-libs.x86_64 4:5.16.3-299.el7_9
+  perl-macros.x86_64 4:5.16.3-299.el7_9                   perl-parent.noarch 1:0.225-244.el7
+  perl-podlators.noarch 0:2.5.1-3.el7                     perl-srpm-macros.noarch 0:1-8.el7
+  perl-threads.x86_64 0:1.87-4.el7                        perl-threads-shared.x86_64 0:1.43-6.el7
+  psmisc.x86_64 0:22.20-17.el7                            python-deltarpm.x86_64 0:3.6-3.el7
+  python-srpm-macros.noarch 0:3-34.el7                    redhat-lsb-submod-security.x86_64 0:4.1-27.el7.centos.1
+  redhat-rpm-config.noarch 0:9.1.0-88.el7.centos          spax.x86_64 0:1.5.2-13.el7
+  time.x86_64 0:1.7-45.el7                                unzip.x86_64 0:6.0-24.el7_9
+  zip.x86_64 0:3.0-11.el7
+
+Updated:
+  yum-utils.noarch 0:1.1.31-54.el7_8
+
+Dependency Updated:
+  cups-libs.x86_64 1:1.6.3-51.el7        elfutils-libelf.x86_64 0:0.176-5.el7       elfutils-libs.x86_64 0:0.176-5.el7
+  rpm.x86_64 0:4.11.3-48.el7_9           rpm-build-libs.x86_64 0:4.11.3-48.el7_9    rpm-libs.x86_64 0:4.11.3-48.el7_9
+  rpm-python.x86_64 0:4.11.3-48.el7_9
+
+Complete!
+[root@RPM ~]#
+[root@RPM ~]# wget https://nginx.org/packages/centos/7/SRPMS/nginx-1.14.1-1.el7_4.ngx.src.rpm
+--2022-03-06 12:15:38--  https://nginx.org/packages/centos/7/SRPMS/nginx-1.14.1-1.el7_4.ngx.src.rpm
+Resolving nginx.org (nginx.org)... 3.125.197.172, 52.58.199.22, 2a05:d014:edb:5702::6, ...
+Connecting to nginx.org (nginx.org)|3.125.197.172|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1033399 (1009K) [application/x-redhat-package-manager]
+Saving to: 'nginx-1.14.1-1.el7_4.ngx.src.rpm'
+
+100%[================================================================================>] 1,033,399   2.52MB/s   in 0.4s
+
+2022-03-06 12:15:39 (2.52 MB/s) - 'nginx-1.14.1-1.el7_4.ngx.src.rpm' saved [1033399/1033399]
+
+[root@RPM ~]#
+[root@RPM ~]# rpm -i nginx-1.14.1-1.el7_4.ngx.src.rpm
+warning: nginx-1.14.1-1.el7_4.ngx.src.rpm: Header V4 RSA/SHA1 Signature, key ID 7bd9bf62: NOKEY
+warning: user builder does not exist - using root
+warning: group builder does not exist - using root
+warning: user builder does not exist - using root
+warning: group builder does not exist - using root
+warning: user builder does not exist - using root
+warning: group builder does not exist - using root
+warning: user builder does not exist - using root
+warning: group builder does not exist - using root
+warning: user builder does not exist - using root
+warning: group builder does not exist - using root
+warning: user builder does not exist - using root
+warning: group builder does not exist - using root
+warning: user builder does not exist - using root
+warning: group builder does not exist - using root
+warning: user builder does not exist - using root
+warning: group builder does not exist - using root
+warning: user builder does not exist - using root
+warning: group builder does not exist - using root
+warning: user builder does not exist - using root
+warning: group builder does not exist - using root
+warning: user builder does not exist - using root
+warning: group builder does not exist - using root
+warning: user builder does not exist - using root
+warning: group builder does not exist - using root
+warning: user builder does not exist - using root
+warning: group builder does not exist - using root
+warning: user builder does not exist - using root
+warning: group builder does not exist - using root
+[root@RPM ~]# ls
+anaconda-ks.cfg  nginx-1.14.1-1.el7_4.ngx.src.rpm  original-ks.cfg  rpmbuild
+[root@RPM ~]#
+[root@RPM ~]# wget https://www.openssl.org/source/openssl-1.1.1m.tar.gz
+--2022-03-06 12:18:02--  https://www.openssl.org/source/openssl-1.1.1m.tar.gz
+Resolving www.openssl.org (www.openssl.org)... 23.52.17.20, 2a02:2d8:0:79a1::c1e, 2a02:2d8:0:799c::c1e
+Connecting to www.openssl.org (www.openssl.org)|23.52.17.20|:443... connected.
+ERROR: cannot verify www.openssl.org's certificate, issued by '/C=US/O=Let\'s Encrypt/CN=R3':
+  Issued certificate has expired.
+To connect to www.openssl.org insecurely, use `--no-check-certificate'.
+[root@RPM ~]# ls
+anaconda-ks.cfg  nginx-1.14.1-1.el7_4.ngx.src.rpm  original-ks.cfg  rpmbuild
+[root@RPM ~]# wget --no-check-certificate  https://www.openssl.org/source/openssl-1.1.1m.tar.gz
+--2022-03-06 12:18:46--  https://www.openssl.org/source/openssl-1.1.1m.tar.gz
+Resolving www.openssl.org (www.openssl.org)... 23.52.17.20, 2a02:2d8:0:799c::c1e, 2a02:2d8:0:79a1::c1e
+Connecting to www.openssl.org (www.openssl.org)|23.52.17.20|:443... connected.
+WARNING: cannot verify www.openssl.org's certificate, issued by '/C=US/O=Let\'s Encrypt/CN=R3':
+  Issued certificate has expired.
+HTTP request sent, awaiting response... 200 OK
+Length: 15011207 (14M) [application/x-gzip]
+Saving to: 'openssl-3.0.1.tar.gz'
+
+100%[================================================================================>] 15,011,207  9.68MB/s   in 1.5s
+
+2022-03-06 12:18:48 (9.68 MB/s) - 'openssl-1.1.1m.tar.gz' saved [15011207/15011207]
+
+[root@RPM ~]# ls
+anaconda-ks.cfg  nginx-1.14.1-1.el7_4.ngx.src.rpm  openssl-1.1.1m.tar.gz  original-ks.cfg  rpmbuild
+[root@RPM ~]# tar -xvf openssl-1.1.1m.tar.gz
+[root@RPM ~]# yum-builddep rpmbuild/SPECS/nginx.spec
+Failed to set locale, defaulting to C
+Loaded plugins: fastestmirror
+Enabling base-source repository
+Enabling extras-source repository
+Enabling updates-source repository
+Loading mirror speeds from cached hostfile
+ * base: mirror.surf
+ * extras: mirror.surf
+ * updates: mirror.surf
+base-source                                                                                        | 2.9 kB  00:00:00
+extras-source                                                                                      | 2.9 kB  00:00:00
+updates-source                                                                                     | 2.9 kB  00:00:00
+(1/3): extras-source/7/primary_db                                                                  |  31 kB  00:00:01
+(2/3): updates-source/7/primary_db                                                                 | 228 kB  00:00:02
+(3/3): base-source/7/primary_db                                                                    | 974 kB  00:00:03
+Checking for new repos for mirrors
+Getting requirements for rpmbuild/SPECS/nginx.spec
+ --> Already installed : redhat-lsb-core-4.1-27.el7.centos.1.x86_64
+ --> Already installed : systemd-219-73.el7_8.5.x86_64
+ --> 1:openssl-devel-1.0.2k-24.el7_9.x86_64
+ --> zlib-devel-1.2.7-19.el7_9.x86_64
+ --> pcre-devel-8.32-17.el7.x86_64
+--> Running transaction check
+---> Package openssl-devel.x86_64 1:1.0.2k-24.el7_9 will be installed
+--> Processing Dependency: openssl-libs(x86-64) = 1:1.0.2k-24.el7_9 for package: 1:openssl-devel-1.0.2k-24.el7_9.x86_64
+--> Processing Dependency: krb5-devel(x86-64) for package: 1:openssl-devel-1.0.2k-24.el7_9.x86_64
+---> Package pcre-devel.x86_64 0:8.32-17.el7 will be installed
+---> Package zlib-devel.x86_64 0:1.2.7-19.el7_9 will be installed
+--> Processing Dependency: zlib = 1.2.7-19.el7_9 for package: zlib-devel-1.2.7-19.el7_9.x86_64
+Package: zlib-1.2.7-19.el7_9.src - can't co-install with zlib-1.2.7-19.el7_9.x86_64
+Package: zlib-1.2.7-19.el7_9.src - can't co-install with zlib-1.2.7-19.el7_9.x86_64
+--> Running transaction check
+---> Package krb5-devel.x86_64 0:1.15.1-51.el7_9 will be installed
+--> Processing Dependency: libkadm5(x86-64) = 1.15.1-51.el7_9 for package: krb5-devel-1.15.1-51.el7_9.x86_64
+--> Processing Dependency: krb5-libs(x86-64) = 1.15.1-51.el7_9 for package: krb5-devel-1.15.1-51.el7_9.x86_64
+--> Processing Dependency: libverto-devel for package: krb5-devel-1.15.1-51.el7_9.x86_64
+--> Processing Dependency: libselinux-devel for package: krb5-devel-1.15.1-51.el7_9.x86_64
+--> Processing Dependency: libcom_err-devel for package: krb5-devel-1.15.1-51.el7_9.x86_64
+--> Processing Dependency: keyutils-libs-devel for package: krb5-devel-1.15.1-51.el7_9.x86_64
+---> Package openssl-libs.x86_64 1:1.0.2k-19.el7 will be updated
+--> Processing Dependency: openssl-libs(x86-64) = 1:1.0.2k-19.el7 for package: 1:openssl-1.0.2k-19.el7.x86_64
+---> Package openssl-libs.x86_64 1:1.0.2k-24.el7_9 will be an update
+---> Package zlib.x86_64 0:1.2.7-18.el7 will be updated
+---> Package zlib.x86_64 0:1.2.7-19.el7_9 will be an update
+--> Running transaction check
+---> Package keyutils-libs-devel.x86_64 0:1.5.8-3.el7 will be installed
+---> Package krb5-libs.x86_64 0:1.15.1-46.el7 will be updated
+---> Package krb5-libs.x86_64 0:1.15.1-51.el7_9 will be an update
+---> Package libcom_err-devel.x86_64 0:1.42.9-19.el7 will be installed
+--> Processing Dependency: libcom_err(x86-64) = 1.42.9-19.el7 for package: libcom_err-devel-1.42.9-19.el7.x86_64
+---> Package libkadm5.x86_64 0:1.15.1-51.el7_9 will be installed
+---> Package libselinux-devel.x86_64 0:2.5-15.el7 will be installed
+--> Processing Dependency: libsepol-devel(x86-64) >= 2.5-10 for package: libselinux-devel-2.5-15.el7.x86_64
+--> Processing Dependency: pkgconfig(libsepol) for package: libselinux-devel-2.5-15.el7.x86_64
+---> Package libverto-devel.x86_64 0:0.2.5-4.el7 will be installed
+---> Package openssl.x86_64 1:1.0.2k-19.el7 will be updated
+---> Package openssl.x86_64 1:1.0.2k-24.el7_9 will be an update
+--> Running transaction check
+---> Package libcom_err.x86_64 0:1.42.9-17.el7 will be updated
+--> Processing Dependency: libcom_err(x86-64) = 1.42.9-17.el7 for package: e2fsprogs-libs-1.42.9-17.el7.x86_64
+--> Processing Dependency: libcom_err(x86-64) = 1.42.9-17.el7 for package: e2fsprogs-1.42.9-17.el7.x86_64
+--> Processing Dependency: libcom_err(x86-64) = 1.42.9-17.el7 for package: libss-1.42.9-17.el7.x86_64
+---> Package libcom_err.x86_64 0:1.42.9-19.el7 will be an update
+---> Package libsepol-devel.x86_64 0:2.5-10.el7 will be installed
+--> Running transaction check
+---> Package e2fsprogs.x86_64 0:1.42.9-17.el7 will be updated
+---> Package e2fsprogs.x86_64 0:1.42.9-19.el7 will be an update
+---> Package e2fsprogs-libs.x86_64 0:1.42.9-17.el7 will be updated
+---> Package e2fsprogs-libs.x86_64 0:1.42.9-19.el7 will be an update
+---> Package libss.x86_64 0:1.42.9-17.el7 will be updated
+---> Package libss.x86_64 0:1.42.9-19.el7 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+==========================================================================================================================
+ Package                            Arch                  Version                            Repository              Size
+==========================================================================================================================
+Installing:
+ openssl-devel                      x86_64                1:1.0.2k-24.el7_9                  updates                1.5 M
+ pcre-devel                         x86_64                8.32-17.el7                        base                   480 k
+ zlib-devel                         x86_64                1.2.7-19.el7_9                     updates                 50 k
+Installing for dependencies:
+ keyutils-libs-devel                x86_64                1.5.8-3.el7                        base                    37 k
+ krb5-devel                         x86_64                1.15.1-51.el7_9                    updates                273 k
+ libcom_err-devel                   x86_64                1.42.9-19.el7                      base                    32 k
+ libkadm5                           x86_64                1.15.1-51.el7_9                    updates                179 k
+ libselinux-devel                   x86_64                2.5-15.el7                         base                   187 k
+ libsepol-devel                     x86_64                2.5-10.el7                         base                    77 k
+ libverto-devel                     x86_64                0.2.5-4.el7                        base                    12 k
+Updating for dependencies:
+ e2fsprogs                          x86_64                1.42.9-19.el7                      base                   701 k
+ e2fsprogs-libs                     x86_64                1.42.9-19.el7                      base                   168 k
+ krb5-libs                          x86_64                1.15.1-51.el7_9                    updates                809 k
+ libcom_err                         x86_64                1.42.9-19.el7                      base                    42 k
+ libss                              x86_64                1.42.9-19.el7                      base                    47 k
+ openssl                            x86_64                1:1.0.2k-24.el7_9                  updates                494 k
+ openssl-libs                       x86_64                1:1.0.2k-24.el7_9                  updates                1.2 M
+ zlib                               x86_64                1.2.7-19.el7_9                     updates                 90 k
+
+Transaction Summary
+==========================================================================================================================
+Install  3 Packages (+7 Dependent packages)
+Upgrade             ( 8 Dependent packages)
+
+Total download size: 6.3 M
+Is this ok [y/d/N]: y
+Downloading packages:
+No Presto metadata available for base
+No Presto metadata available for updates
+(1/18): e2fsprogs-libs-1.42.9-19.el7.x86_64.rpm                                                    | 168 kB  00:00:00
+(2/18): libcom_err-1.42.9-19.el7.x86_64.rpm                                                        |  42 kB  00:00:00
+(3/18): libcom_err-devel-1.42.9-19.el7.x86_64.rpm                                                  |  32 kB  00:00:00
+(4/18): keyutils-libs-devel-1.5.8-3.el7.x86_64.rpm                                                 |  37 kB  00:00:00
+(5/18): krb5-devel-1.15.1-51.el7_9.x86_64.rpm                                                      | 273 kB  00:00:01
+(6/18): libselinux-devel-2.5-15.el7.x86_64.rpm                                                     | 187 kB  00:00:00
+(7/18): libsepol-devel-2.5-10.el7.x86_64.rpm                                                       |  77 kB  00:00:00
+(8/18): libverto-devel-0.2.5-4.el7.x86_64.rpm                                                      |  12 kB  00:00:00
+(9/18): libkadm5-1.15.1-51.el7_9.x86_64.rpm                                                        | 179 kB  00:00:00
+(10/18): e2fsprogs-1.42.9-19.el7.x86_64.rpm                                                        | 701 kB  00:00:01
+(11/18): krb5-libs-1.15.1-51.el7_9.x86_64.rpm                                                      | 809 kB  00:00:02
+(12/18): libss-1.42.9-19.el7.x86_64.rpm                                                            |  47 kB  00:00:00
+(13/18): pcre-devel-8.32-17.el7.x86_64.rpm                                                         | 480 kB  00:00:00
+(14/18): zlib-1.2.7-19.el7_9.x86_64.rpm                                                            |  90 kB  00:00:00
+(15/18): openssl-libs-1.0.2k-24.el7_9.x86_64.rpm                                                   | 1.2 MB  00:00:00
+(16/18): zlib-devel-1.2.7-19.el7_9.x86_64.rpm                                                      |  50 kB  00:00:00
+(17/18): openssl-1.0.2k-24.el7_9.x86_64.rpm                                                        | 494 kB  00:00:00
+(18/18): openssl-devel-1.0.2k-24.el7_9.x86_64.rpm                                                  | 1.5 MB  00:00:02
+--------------------------------------------------------------------------------------------------------------------------
+Total                                                                                     1.4 MB/s | 6.3 MB  00:00:04
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : libcom_err-1.42.9-19.el7.x86_64                                                                       1/26
+  Updating   : zlib-1.2.7-19.el7_9.x86_64                                                                            2/26
+  Updating   : krb5-libs-1.15.1-51.el7_9.x86_64                                                                      3/26
+  Updating   : 1:openssl-libs-1.0.2k-24.el7_9.x86_64                                                                 4/26
+  Installing : libkadm5-1.15.1-51.el7_9.x86_64                                                                       5/26
+  Installing : zlib-devel-1.2.7-19.el7_9.x86_64                                                                      6/26
+  Updating   : e2fsprogs-libs-1.42.9-19.el7.x86_64                                                                   7/26
+  Updating   : libss-1.42.9-19.el7.x86_64                                                                            8/26
+  Installing : libcom_err-devel-1.42.9-19.el7.x86_64                                                                 9/26
+  Installing : libsepol-devel-2.5-10.el7.x86_64                                                                     10/26
+  Installing : libverto-devel-0.2.5-4.el7.x86_64                                                                    11/26
+  Installing : keyutils-libs-devel-1.5.8-3.el7.x86_64                                                               12/26
+  Installing : pcre-devel-8.32-17.el7.x86_64                                                                        13/26
+  Installing : libselinux-devel-2.5-15.el7.x86_64                                                                   14/26
+  Installing : krb5-devel-1.15.1-51.el7_9.x86_64                                                                    15/26
+  Installing : 1:openssl-devel-1.0.2k-24.el7_9.x86_64                                                               16/26
+  Updating   : e2fsprogs-1.42.9-19.el7.x86_64                                                                       17/26
+  Updating   : 1:openssl-1.0.2k-24.el7_9.x86_64                                                                     18/26
+  Cleanup    : 1:openssl-1.0.2k-19.el7.x86_64                                                                       19/26
+  Cleanup    : e2fsprogs-1.42.9-17.el7.x86_64                                                                       20/26
+  Cleanup    : 1:openssl-libs-1.0.2k-19.el7.x86_64                                                                  21/26
+  Cleanup    : krb5-libs-1.15.1-46.el7.x86_64                                                                       22/26
+  Cleanup    : e2fsprogs-libs-1.42.9-17.el7.x86_64                                                                  23/26
+  Cleanup    : libss-1.42.9-17.el7.x86_64                                                                           24/26
+  Cleanup    : libcom_err-1.42.9-17.el7.x86_64                                                                      25/26
+  Cleanup    : zlib-1.2.7-18.el7.x86_64                                                                             26/26
+  Verifying  : libselinux-devel-2.5-15.el7.x86_64                                                                    1/26
+  Verifying  : zlib-1.2.7-19.el7_9.x86_64                                                                            2/26
+  Verifying  : krb5-libs-1.15.1-51.el7_9.x86_64                                                                      3/26
+  Verifying  : 1:openssl-libs-1.0.2k-24.el7_9.x86_64                                                                 4/26
+  Verifying  : pcre-devel-8.32-17.el7.x86_64                                                                         5/26
+  Verifying  : keyutils-libs-devel-1.5.8-3.el7.x86_64                                                                6/26
+  Verifying  : 1:openssl-devel-1.0.2k-24.el7_9.x86_64                                                                7/26
+  Verifying  : libverto-devel-0.2.5-4.el7.x86_64                                                                     8/26
+  Verifying  : libcom_err-1.42.9-19.el7.x86_64                                                                       9/26
+  Verifying  : 1:openssl-1.0.2k-24.el7_9.x86_64                                                                     10/26
+  Verifying  : e2fsprogs-libs-1.42.9-19.el7.x86_64                                                                  11/26
+  Verifying  : zlib-devel-1.2.7-19.el7_9.x86_64                                                                     12/26
+  Verifying  : libkadm5-1.15.1-51.el7_9.x86_64                                                                      13/26
+  Verifying  : libsepol-devel-2.5-10.el7.x86_64                                                                     14/26
+  Verifying  : libss-1.42.9-19.el7.x86_64                                                                           15/26
+  Verifying  : e2fsprogs-1.42.9-19.el7.x86_64                                                                       16/26
+  Verifying  : krb5-devel-1.15.1-51.el7_9.x86_64                                                                    17/26
+  Verifying  : libcom_err-devel-1.42.9-19.el7.x86_64                                                                18/26
+  Verifying  : e2fsprogs-libs-1.42.9-17.el7.x86_64                                                                  19/26
+  Verifying  : libcom_err-1.42.9-17.el7.x86_64                                                                      20/26
+  Verifying  : krb5-libs-1.15.1-46.el7.x86_64                                                                       21/26
+  Verifying  : 1:openssl-libs-1.0.2k-19.el7.x86_64                                                                  22/26
+  Verifying  : zlib-1.2.7-18.el7.x86_64                                                                             23/26
+  Verifying  : e2fsprogs-1.42.9-17.el7.x86_64                                                                       24/26
+  Verifying  : 1:openssl-1.0.2k-19.el7.x86_64                                                                       25/26
+  Verifying  : libss-1.42.9-17.el7.x86_64                                                                           26/26
+
+Installed:
+  openssl-devel.x86_64 1:1.0.2k-24.el7_9      pcre-devel.x86_64 0:8.32-17.el7      zlib-devel.x86_64 0:1.2.7-19.el7_9
+
+Dependency Installed:
+  keyutils-libs-devel.x86_64 0:1.5.8-3.el7  krb5-devel.x86_64 0:1.15.1-51.el7_9   libcom_err-devel.x86_64 0:1.42.9-19.el7
+  libkadm5.x86_64 0:1.15.1-51.el7_9         libselinux-devel.x86_64 0:2.5-15.el7  libsepol-devel.x86_64 0:2.5-10.el7
+  libverto-devel.x86_64 0:0.2.5-4.el7
+
+Dependency Updated:
+  e2fsprogs.x86_64 0:1.42.9-19.el7         e2fsprogs-libs.x86_64 0:1.42.9-19.el7    krb5-libs.x86_64 0:1.15.1-51.el7_9
+  libcom_err.x86_64 0:1.42.9-19.el7        libss.x86_64 0:1.42.9-19.el7             openssl.x86_64 1:1.0.2k-24.el7_9
+  openssl-libs.x86_64 1:1.0.2k-24.el7_9    zlib.x86_64 0:1.2.7-19.el7_9
+
+Complete!
+[root@RPM ~]# yum group install "Development Tools"
+[root@RPM ~]# yum install perl-IPC-Cmd
+[root@RPM ~]# rpmbuild -bb /root/rpmbuild/SPECS/nginx.spec
+[root@RPM RPMS]# ll x86_64
+total 4392
+-rw-r--r--. 1 root root 2006360 мар  6 15:07 nginx-1.14.1-1.el7_4.ngx.x86_64.rpm
+-rw-r--r--. 1 root root 2489292 мар  6 15:07 nginx-debuginfo-1.14.1-1.el7_4.ngx.x86_64.rpm
+[root@RPM ~]# yum localinstall -y \rpmbuild/RPMS/x86_64/nginx-1.14.1-1.el7_4.ngx.x86_64.rpm
+Loaded plugins: fastestmirror
+Examining rpmbuild/RPMS/x86_64/nginx-1.14.1-1.el7_4.ngx.x86_64.rpm: 1:nginx-1.14.1-1.el7_4.ngx.x86_64
+Marking rpmbuild/RPMS/x86_64/nginx-1.14.1-1.el7_4.ngx.x86_64.rpm to be installed
+Resolving Dependencies
+--> Running transaction check
+---> Package nginx.x86_64 1:1.14.1-1.el7_4.ngx will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===========================================================================================================================
+ Package           Arch               Version                           Repository                                    Size
+===========================================================================================================================
+Installing:
+ nginx             x86_64             1:1.14.1-1.el7_4.ngx              /nginx-1.14.1-1.el7_4.ngx.x86_64             5.8 M
+
+Transaction Summary
+===========================================================================================================================
+Install  1 Package
+
+Total size: 5.8 M
+Installed size: 5.8 M
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:nginx-1.14.1-1.el7_4.ngx.x86_64                                                                       1/1
+----------------------------------------------------------------------
+
+Thanks for using nginx!
+
+Please find the official documentation for nginx here:
+* http://nginx.org/en/docs/
+
+Please subscribe to nginx-announce mailing list to get
+the most important news about nginx:
+* http://nginx.org/en/support.html
+
+Commercial subscriptions for nginx are available on:
+* http://nginx.com/products/
+
+----------------------------------------------------------------------
+  Verifying  : 1:nginx-1.14.1-1.el7_4.ngx.x86_64                                                                       1/1
+
+Installed:
+  nginx.x86_64 1:1.14.1-1.el7_4.ngx
+
+Complete!
+[root@RPM ~]#
+[root@RPM ~]# systemctl start nginx
+[root@RPM ~]# systemctl status nginx
+● nginx.service - nginx - high performance web server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; disabled; vendor preset: disabled)
+   Active: active (running) since Вс 2022-03-06 15:37:43 UTC; 11s ago
+     Docs: http://nginx.org/en/docs/
+  Process: 11309 ExecStart=/usr/sbin/nginx -c /etc/nginx/nginx.conf (code=exited, status=0/SUCCESS)
+ Main PID: 11310 (nginx)
+   CGroup: /system.slice/nginx.service
+           ├─11310 nginx: master process /usr/sbin/nginx -c /etc/nginx/nginx.conf
+           └─11311 nginx: worker process
+
+мар 06 15:37:43 RPM systemd[1]: Starting nginx - high performance web server...
+мар 06 15:37:43 RPM systemd[1]: Started nginx - high performance web server.
+[root@RPM ~]#
+[root@RPM ~]# cd /
+[root@RPM /]# ls
+bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  swapfile  sys  tmp  usr  vagrant  var
+[root@RPM /]# cd usr
+[root@RPM usr]# ls
+bin  etc  games  include  lib  lib64  libexec  local  sbin  share  src  tmp
+[root@RPM usr]# cd share/nginx
+[root@RPM nginx]# ls
+html
+[root@RPM nginx]# cd html
+[root@RPM html]# ls
+50x.html  index.html
+[root@RPM html]# mkdir repo
+[root@RPM html]# ls
+50x.html  index.html  repo
+[root@RPM html]#
+[root@RPM repo]# cp /root/rpmbuild/RPMS/x86_64/nginx-1.14.1-1.el7_4.ngx.x86_64.rpm /usr/share/nginx/html/repo/
+[root@RPM repo]# ls
+nginx-1.14.1-1.el7_4.ngx.x86_64.rpm
+[root@RPM repo]# wget https://repo.percona.com/yum/release/7/RPMS/noarch/percona-release-1.0-22.noarch.rpm -O /usr/share/nginx/html/repo/percona-release-0.1-6.noarch.rpm
+--2022-03-09 10:18:34--  https://repo.percona.com/yum/release/7/RPMS/noarch/percona-release-1.0-22.noarch.rpm
+Распознаётся repo.percona.com (repo.percona.com)... 142.132.159.91, 141.95.32.160
+Подключение к repo.percona.com (repo.percona.com)|142.132.159.91|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа... 200 OK
+Длина: 18000 (18K) [application/x-redhat-package-manager]
+Сохранение в: «/usr/share/nginx/html/repo/percona-release-0.1-6.noarch.rpm»
+
+100%[==============================================================================================================================================>] 18 000      --.-K/s   за 0s
+
+2022-03-09 10:18:35 (40,5 MB/s) - «/usr/share/nginx/html/repo/percona-release-0.1-6.noarch.rpm» сохранён [18000/18000]
+
+[root@RPM repo]# createrepo /usr/share/nginx/html/repo/
+Spawning worker 0 with 2 pkgs
+Workers Finished
+Saving Primary metadata
+Saving file lists metadata
+Saving other metadata
+Generating sqlite DBs
+Sqlite DBs complete
+[root@RPM repo]#
+[root@RPM ~]# nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+[root@RPM ~]# nginx -s reload
+[root@RPM ~]# curl -a http://localhost/repo/
+<html>
+<head><title>403 Forbidden</title></head>
+<body bgcolor="white">
+<center><h1>403 Forbidden</h1></center>
+<hr><center>nginx/1.14.1</center>
+</body>
+</html>
+[root@RPM ~]#
+[root@RPM ~]# curl -a http://localhost/repo/
+<html>
+<head><title>Index of /repo/</title></head>
+<body bgcolor="white">
+<h1>Index of /repo/</h1><hr><pre><a href="../">../</a>
+<a href="repodata/">repodata/</a>                                          09-Mar-2022 10:18                   -
+<a href="nginx-1.14.1-1.el7_4.ngx.x86_64.rpm">nginx-1.14.1-1.el7_4.ngx.x86_64.rpm</a>                06-Mar-2022 15:44             2006360
+<a href="percona-release-0.1-6.noarch.rpm">percona-release-0.1-6.noarch.rpm</a>                   20-Jul-2020 13:35               18000
+</pre><hr></body>
+</html>
+[root@RPM ~]#
+[root@RPM ~]# cat >> /etc/yum.repos.d/otus.repo << EOF
+> [otus]
+> name=otus-linux
+> baseurl=http://localhost/repo
+> gpgcheck=0
+> enabled=1
+> EOF
+[root@RPM ~]# yum repolist enabled | grep otus
+otus                                otus-linux                                 2
+[root@RPM ~]# yum list | grep otus
+percona-release.noarch                      1.0-22                     otus
+[root@RPM ~]# yum install percona-release -y
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.surf
+ * extras: mirror.surf
+ * updates: mirror.surf
+Resolving Dependencies
+--> Running transaction check
+---> Package percona-release.noarch 0:1.0-22 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+==============================================================================================================
+ Package                          Arch                    Version                 Repository             Size
+==============================================================================================================
+Installing:
+ percona-release                  noarch                  1.0-22                  otus                   18 k
+
+Transaction Summary
+==============================================================================================================
+Install  1 Package
+
+Total download size: 18 k
+Installed size: 24 k
+Downloading packages:
+percona-release-0.1-6.noarch.rpm                                                       |  18 kB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : percona-release-1.0-22.noarch                                                              1/1
+* Enabling the Percona Original repository
+<*> All done!
+The percona-release package now contains a percona-release script that can enable additional repositories for                     our newer products.
+
+For example, to enable the Percona Server 8.0 repository use:
+
+  percona-release setup ps80
+
+Note: To avoid conflicts with older product versions, the percona-release setup command may disable our origin                    al repository for some products.
+
+For more information, please visit:
+  https://www.percona.com/doc/percona-repo-config/percona-release.html
+
+  Verifying  : percona-release-1.0-22.noarch                                                              1/1
+
+Installed:
+  percona-release.noarch 0:1.0-22
+
+Complete!
+[root@RPM ~]#
